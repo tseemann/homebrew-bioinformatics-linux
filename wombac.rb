@@ -2,8 +2,9 @@ class Wombac < Formula
   homepage "https://github.com/Victorian-Bioinformatics-Consortium/wombac"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/Victorian-Bioinformatics-Consortium/wombac/archive/2.0.tar.gz"
-  sha256 "10b60018ecf6678ebcbaec6df7ce874de6e6601a45bf6766958bb0dbde168067"
+  
+  url "https://github.com/Victorian-Bioinformatics-Consortium/wombac/archive/v2.1.tar.gz"
+  sha256 "348c0f8df6634787de46cc72c46439e42609e7aa0553da343c7c0f913d537389"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
