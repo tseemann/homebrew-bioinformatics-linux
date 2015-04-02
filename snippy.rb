@@ -2,8 +2,8 @@ class Snippy < Formula
   homepage "https://github.com/Victorian-Bioinformatics-Consortium/snippy"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.2.tar.gz"
-  sha256 "5a48f60975f7400fbc6aa0340d6758a17d6f66b2038cfa1aab2319287060642b"
+  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.3.tar.gz"
+  sha256 "e2c3417fe1fb04d7cdff901b56533961fc446b208a511203bccf060144f08a7f"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
