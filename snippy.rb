@@ -2,12 +2,13 @@ class Snippy < Formula
   homepage "https://github.com/Victorian-Bioinformatics-Consortium/snippy"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.3.tar.gz"
-  sha256 "e2c3417fe1fb04d7cdff901b56533961fc446b208a511203bccf060144f08a7f"
+  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.4.tar.gz"
+  sha256 "08335a3ce122088c545da0a0e03df40d8bc86acab5134ebdcda5ae0a8f3f84dc"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
-  
+  depends_on "SVG::Graph" => :perl
+
   depends_on "bwa"
   depends_on "freebayes"
   depends_on "parallel"
@@ -22,5 +23,6 @@ class Snippy < Formula
 
   test do
     system "#{bin}/snippy --version"
+    system "#{bin}/snippy-core -h"
   end
 end
