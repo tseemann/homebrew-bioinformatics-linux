@@ -1,9 +1,9 @@
 class Abricate < Formula
-  homepage "https://github.com/Victorian-Bioinformatics-Consortium/abricate"
+  homepage "https://github.com/tseemann/abricate"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/Victorian-Bioinformatics-Consortium/abricate/archive/v0.1.tar.gz"
-  sha256 "31ca8375d4743b0ebf74f750f92cde88757052a4d6157ebbce6f250b2bbee124"
+  url "https://github.com/tseemann/abricate/archive/v0.2.tar.gz"
+  sha256 "65069fd0bffaae92b5144262ba9ca736a0ddb1f657ebe27bc3d1a5160ce16f66"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
@@ -15,6 +15,7 @@ class Abricate < Formula
   end
 
   test do
-    system "#{bin}/abricate --version"
+    assert_match "#{version}", shell_output("abricate --version")
+    assert_match "rifampicin", shell_output("abricate --list 2>&1")
   end
 end
