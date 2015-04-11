@@ -2,8 +2,8 @@ class Snippy < Formula
   homepage "https://github.com/Victorian-Bioinformatics-Consortium/snippy"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.4.tar.gz"
-  sha256 "08335a3ce122088c545da0a0e03df40d8bc86acab5134ebdcda5ae0a8f3f84dc"
+  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.5.tar.gz"
+  sha256 "1fa734a9bc1cd6edfbe8cb58e91f81bee769898165ec29912922d5c5e4cdb01e"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
@@ -17,12 +17,14 @@ class Snippy < Formula
   depends_on "vcftools"
 
   def install
+    rm "bin/snippy-make_tarball"
     prefix.install Dir["*"]
-    # FIXME: don't include snippy-make_tarball in bin/
   end
 
   test do
     system "#{bin}/snippy --version"
-    system "#{bin}/snippy-core -h"
+    system "#{bin}/snippy-core --help"
+    system "#{bin}/snippy-vcf_report --help"
+    system "#{bin}/snippy-vcf_to_tab --help"
   end
 end
