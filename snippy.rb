@@ -22,9 +22,8 @@ class Snippy < Formula
   end
 
   test do
-    system "#{bin}/snippy --version"
-    system "#{bin}/snippy-core --help"
-    system "#{bin}/snippy-vcf_report --help"
-    system "#{bin}/snippy-vcf_to_tab --help"
+    ["","-core","-vcf_report","-vcf_to_tab"].each do |suffix|
+      assert_match "Usage:", shell_output("snippy#{suffix} 2>&1", 1)
+    end
   end
 end
