@@ -2,14 +2,15 @@ class Snippy < Formula
   homepage "https://github.com/Victorian-Bioinformatics-Consortium/snippy"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.5.tar.gz"
-  sha256 "1fa734a9bc1cd6edfbe8cb58e91f81bee769898165ec29912922d5c5e4cdb01e"
+  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.6.tar.gz"
+  sha256 "defb3628bb8b696f5ed40a61d210df2addcffacbcbd73f9da27ae208e920e92c"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
   depends_on "SVG::Graph" => :perl
 
   depends_on "bwa"
+  depends_on "htslib" # for 'bgzip'
   depends_on "freebayes"
   depends_on "parallel"
   depends_on "samtools"
