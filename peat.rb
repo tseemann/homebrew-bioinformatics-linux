@@ -4,24 +4,17 @@ class Peat < Formula
   # doi "10.1186/1471-2105-16-S1-S2"
   # tag "bioinformatics"
 
-  version "1.0"
+  version "1.2"
 
-  if OS.mac?
-    url "https://github.com/jhhung/PEAT/releases/download/v1.0-beta.1/PEAT_mac_v1.0-beta.1"
-    sha256 "900ae5e72e7c4fb961fb59d45d82f51350a2d44efa5f932f3c872597438be9b2"
-  elsif OS.linux?
-    url "https://github.com/jhhung/PEAT/releases/download/v1.0/PEAT_v.1.0_linux_static"
-    sha256 "c7c85c85393bc0780699cfc0773cfacd3e8c117347181bdcda4ada2f152bec37"
+  if OS.linux?
+    url "https://github.com/jhhung/PEAT/releases/download/v1.2/PEAT_v.1.2_linux_static"
+    sha256 "2045b95610759f7732d0709d4024b11da60c9ca049e12f6b24bdd74304a8df84"
   else
     raise "Unsupported operating system"
   end
 
   def install
-    if OS.mac?
-      bin.install "PEAT_mac.v1.0-beta.1" => "PEAT"
-    else
-      bin.install "PEAT_v.1.0_linux_static" => "PEAT"
-    end
+    bin.install "PEAT_v.1.2_linux_static" => "PEAT"
   end
 
   test do
