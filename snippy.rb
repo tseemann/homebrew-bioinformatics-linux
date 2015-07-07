@@ -7,7 +7,6 @@ class Snippy < Formula
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
-  depends_on "SVG::Graph" => :perl
 
   depends_on "bwa"
   depends_on "htslib" # for 'bgzip'
