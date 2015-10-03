@@ -9,7 +9,7 @@ class Ngmaster < Formula
   head "https://github.com/MDU-PHL/ngmaster.git"
 
   depends_on "ispcr"
-
+  depends_on "blast"
   depends_on LanguageModuleRequirement.new :python, "biopython", "Bio"
 
   def install
