@@ -1,9 +1,10 @@
 class Snippy < Formula
-  homepage "https://github.com/Victorian-Bioinformatics-Consortium/snippy"
+  desc "Rapid bacterial SNP calling and core genome alignments"
+  homepage "https://github.com/tseemann/snippy"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/Victorian-Bioinformatics-Consortium/snippy/archive/v2.6.tar.gz"
-  sha256 "defb3628bb8b696f5ed40a61d210df2addcffacbcbd73f9da27ae208e920e92c"
+  url "https://github.com/tseemann/snippy/archive/v2.7.tar.gz"
+  sha256 "9e19b77ddb125cc6e96971d3e7951da09d73d24fffa5a5775f3cf991f413cfcc"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
@@ -15,6 +16,7 @@ class Snippy < Formula
   depends_on "samtools"
   depends_on "vcflib"
   depends_on "vcftools"
+  depends_on "snpeff"
 
   def install
     rm "bin/snippy-make_tarball"
