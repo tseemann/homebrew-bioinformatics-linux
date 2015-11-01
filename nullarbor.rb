@@ -3,8 +3,8 @@ class Nullarbor < Formula
   homepage "https://github.com/tseemann/nullarbor"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/tseemann/nullarbor/archive/v0.6.tar.gz"
-  sha256 "f01aba556f1998c9b7ff4ca3dbe814989f708f3c119c5cc9d3c04f10f218be11"
+  url "https://github.com/tseemann/nullarbor/archive/v0.7.tar.gz"
+  sha256 "7dbff1ae6255b5e4f1e0a9bbb0104af34ecf2a07d28d771bd584fb7a5409c34b"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
@@ -18,6 +18,7 @@ class Nullarbor < Formula
   depends_on "trimal"
   depends_on "fasttree"
   depends_on "megahit"
+  depends_on "spades"
   depends_on "kraken"
   depends_on "mlst"
   depends_on "abricate"
