@@ -3,8 +3,8 @@ class Snippy < Formula
   homepage "https://github.com/tseemann/snippy"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/tseemann/snippy/archive/v2.7.tar.gz"
-  sha256 "9e19b77ddb125cc6e96971d3e7951da09d73d24fffa5a5775f3cf991f413cfcc"
+  url "https://github.com/tseemann/snippy/archive/v2.8.tar.gz"
+  sha256 "54e0a5238f0f2555e5b9d29df193af0a9fbfbe27de0059661f95e41263a12fec"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
@@ -24,7 +24,7 @@ class Snippy < Formula
   end
 
   test do
-    ["","-core","-vcf_report","-vcf_to_tab"].each do |suffix|
+    ["","-core","-vcf_report","-vcf_to_tab","-vcf_filter"].each do |suffix|
       assert_match "Usage:", shell_output("snippy#{suffix} 2>&1", 1)
     end
   end
