@@ -3,8 +3,11 @@ class Snippy < Formula
   homepage "https://github.com/tseemann/snippy"
   # doi ""
   # tag "bioinformatics"
-  url "https://github.com/tseemann/snippy/archive/v2.8.tar.gz"
-  sha256 "54e0a5238f0f2555e5b9d29df193af0a9fbfbe27de0059661f95e41263a12fec"
+  
+  url "https://github.com/tseemann/snippy/archive/v2.9.tar.gz"
+  sha256 "8b07c83b8dc9e6ae6983a933b12d2b87b1f276678c63544c2472cd61721589a9"
+
+  head "https://github.com/tseemann/snippy.git"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Time::Piece" => :perl
