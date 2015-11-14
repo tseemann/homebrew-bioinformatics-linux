@@ -14,6 +14,8 @@ class Quaff < Formula
 
   def install
     ENV.cxx11
+    # remove the XCode project as it interferes with Makefile
+    rm_r %w[quaff]
     system "make",
       "PREFIX=#{prefix}",
       "CPP=#{ENV.cxx}",
