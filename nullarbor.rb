@@ -25,6 +25,7 @@ class Nullarbor < Formula
   depends_on "megahit"
   depends_on "spades"
   depends_on "kraken"
+  depends_on "skewer"
   depends_on "mlst"
   depends_on "abricate"
   depends_on "newick-utils"
