@@ -16,11 +16,10 @@ class Nullarbor < Formula
   depends_on "Spreadsheet::Read" => :perl
   depends_on "File::Copy" => :perl
   depends_on "YAML::Tiny" => :perl
-  depends_on "Bio::Roary" => :perl
 
   depends_on "tseemann/bioinformatics-linux/snippy"
+  depends_on "tseemann/bioinformatics-linux/roary"
   depends_on "prokka"
-  depends_on "mash"
   depends_on "fasttree" => "with-double"
   depends_on "megahit"
   depends_on "spades"
@@ -31,6 +30,7 @@ class Nullarbor < Formula
   depends_on "newick-utils"
   depends_on "imagemagick" => "with-librsvg"
   depends_on "pandoc" unless OS.linux? # GHC won't build
+  depends_on "mash" => :optional
 
   def install
     prefix.install Dir["*"]
