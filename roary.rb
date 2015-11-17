@@ -18,7 +18,7 @@ class Roary < Formula
   depends_on "prank"
   depends_on "fasttree" => "with-double"
 
-  depends_on "R" => :optional
+  depends_on "r" => :optional
   depends_on "kraken" => :optional
 
   def install
