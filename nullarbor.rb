@@ -4,8 +4,8 @@ class Nullarbor < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/tseemann/nullarbor/archive/v0.8.tar.gz"
-  sha256 "c103daff9c1b205da65a10bf34ce68f5e732fa77a8393d86cbeb2d842bd24f53"
+  url "https://github.com/tseemann/nullarbor/archive/v0.9.tar.gz"
+  sha256 "063957e34801d70708d3fd32902a96c718e074eda2b2dc62c85e7d42321750fc"
 
   head "https://github.com/tseemann/nullarbor.git"
 
@@ -28,6 +28,7 @@ class Nullarbor < Formula
   depends_on "mlst"
   depends_on "abricate"
   depends_on "newick-utils"
+  depends_on "parsnp"
   depends_on "imagemagick" => "with-librsvg"
   depends_on "pandoc" unless OS.linux? # GHC won't build
   depends_on "mash" => :optional
