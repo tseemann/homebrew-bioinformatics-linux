@@ -4,8 +4,8 @@ class Nullarbor < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/tseemann/nullarbor/archive/v0.9.tar.gz"
-  sha256 "063957e34801d70708d3fd32902a96c718e074eda2b2dc62c85e7d42321750fc"
+  url "https://github.com/tseemann/nullarbor/archive/v1.00.tar.gz"
+  sha256 "0477e36b6d601a6c85d9d77654c273025e9da005129a83fc34df730641b8a210"
 
   head "https://github.com/tseemann/nullarbor.git"
 
@@ -24,14 +24,14 @@ class Nullarbor < Formula
   depends_on "megahit"
   depends_on "spades"
   depends_on "kraken"
-  depends_on "skewer"
+  depends_on "trimmomatic"
   depends_on "mlst"
   depends_on "abricate"
   depends_on "newick-utils"
-  depends_on "parsnp"
   depends_on "imagemagick" => "with-librsvg"
   depends_on "pandoc" unless OS.linux? # GHC won't build
   depends_on "mash" => :optional
+  depends_on "parsnp" => :optional
 
   def install
     prefix.install Dir["*"]
