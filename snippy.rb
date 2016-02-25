@@ -4,8 +4,8 @@ class Snippy < Formula
   # doi ""
   # tag "bioinformatics"
   
-  url "https://github.com/tseemann/snippy/archive/v2.9.tar.gz"
-  sha256 "8b07c83b8dc9e6ae6983a933b12d2b87b1f276678c63544c2472cd61721589a9"
+  url "https://github.com/tseemann/snippy/archive/v3.0.tar.gz"
+  sha256 "e76eeeb879d8fc3c78ebc7fdad15966ecc9b2e1b6f706bc83d89fa1622b8fb5f"
 
   head "https://github.com/tseemann/snippy.git"
 
