@@ -4,8 +4,8 @@ class Nullarbor < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/tseemann/nullarbor/archive/v1.00.tar.gz"
-  sha256 "0477e36b6d601a6c85d9d77654c273025e9da005129a83fc34df730641b8a210"
+  url "https://github.com/tseemann/nullarbor/archive/v1.01.tar.gz"
+  sha256 "b3d74855040b3b7a07b44fe477d11e87e61b389ff9bf99c9ad8d57c53ca5a453"
 
   head "https://github.com/tseemann/nullarbor.git"
 
