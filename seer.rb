@@ -11,14 +11,16 @@ class Seer < Formula
   homepage "https://github.com/johnlees/seer"
   # doi "10.1101/038463"
   # tag "bioinformatics"
-  
+
   depends_on LinuxRequirement
 
-  url "https://github.com/johnlees/seer/releases/download/v1.0.2/seer_v1.0.2_static.tar.gz"
-  sha256 "7f8649babf948d5da8a6bb88ccad5715c64c3465661d2f12c4e08c168414fb45"
+  url "https://github.com/johnlees/seer/releases/download/v1.1.1/seer_v1.1.1_static.tar.gz"
+  version "1.1.1"
+  sha256 "ba952968b77ee88ff57198eb1d6987dcc2eaf4e48b90f23b2c2f12d11c7b9f4e"
 
   def install
-    bin.install Dir["*"]
+    bin.install Dir["src/*"]
+    pkgshare.install "scripts", "test"
   end
 
   test do
