@@ -1,9 +1,10 @@
 class Figtree < Formula
+  desc "graphical viewer of phylogenetic trees"
   homepage "http://tree.bio.ed.ac.uk/software/figtree/"
   # doi ""
   # tag "bioinformatics"
 
-  url 'http://tree.bio.ed.ac.uk/download.php?id=90&num=3'
+  url "http://tree.bio.ed.ac.uk/download.php?id=90&num=3"
   sha256 "5064509fbe8cf069c6b0f8fdacf8c3f651971b11956484ce98a18a114ce1a096"
   version "1.4.2"
 
