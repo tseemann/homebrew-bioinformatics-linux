@@ -2,7 +2,7 @@ class LinuxRequirement < Requirement
   fatal true
   satisfy OS.linux?
   def message
-    "This formula only supports the Linux version."
+    "Bandage can be installed on Mac with 'brew cask install bandage'."
   end
 end
 
@@ -12,12 +12,10 @@ class Bandage < Formula
   # doi "10.1101/018333"
   # tag "bioinformatics"
 
-  url "https://github.com/rrwick/Bandage/releases/download/v0.7.1/Bandage_Ubuntu_14.04_dynamic_v0.7.1.zip"
-  sha256 "53519781665480b751d9173756be5e3a916941f23a5dc706851b69c791418189"
+  url "https://github.com/rrwick/Bandage/releases/download/v0.8.0/Bandage_Ubuntu_dynamic_v0_8_0.zip"
+  sha256 "cea4466973949910c4d1deb7cd92b5ec0511247c63a2ebdbd927b41cac10bade"
 
   depends_on LinuxRequirement
-#  depends_on "pcre"
-#  depends_on "qt5"
 
   def install
     bin.install "Bandage"
