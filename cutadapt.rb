@@ -4,16 +4,16 @@ class Cutadapt < Formula
   # tag "bioinformatics"
   # doi "10.14806/ej.17.1.200"
 
-  url "https://github.com/marcelm/cutadapt/archive/v1.9.tar.gz"
-  sha256 "e58795de2c1861c5f23d987f7d103eb31f097bdcaeedbbf188878aa44eb3e340"
+  url "https://github.com/marcelm/cutadapt/archive/v1.10.tar.gz"
+  sha256 "0019eebf971c32c356fc4cffd22dca4040010f097950e9ce578c29e1c92e5b59"
 
   head "https://github.com/marcelm/cutadapt.git"
 
   depends_on :python if MacOS.version <= :snow_leopard
 
   resource "Cython" do
-    url "http://cython.org/release/Cython-0.23.tar.gz"
-    sha256 "9fd01e8301c24fb3ba0411ad8eb16f5d9f9f8e66b1281fbe7aba2a9bd9d343dc"
+    url "https://pypi.python.org/packages/c6/fe/97319581905de40f1be7015a0ea1bd336a756f6249914b148a17eefa75dc/Cython-0.24.1.tar.gz"
+    sha256 "84808fda00508757928e1feadcf41c9f78e9a9b7167b6649ab0933b76f75e7b9"
   end
 
   def install
