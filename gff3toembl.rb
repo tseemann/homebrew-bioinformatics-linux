@@ -3,9 +3,8 @@ class Gff3toembl < Formula
   homepage "https://github.com/sanger-pathogens/gff3toembl"
   # tag "bioinformatics"
 
-  url "https://github.com/sanger-pathogens/gff3toembl/archive/v1.0.1.tar.gz"
-  sha256 "3d11f0c2cf4a4a81fc2284b1bccc031792fcc897e7f0133a3e612d8c0a419e3d"
-
+  url "https://github.com/sanger-pathogens/gff3toembl/archive/v1.0.9.tar.gz"
+  sha256 "94170f7f79a519d90bf19f399ce38872d81aec1befb8b8f39cc58789ddf4bdff"
   head "https://github.com/sanger-pathogens/gff3toembl.git"
 
   depends_on :python
