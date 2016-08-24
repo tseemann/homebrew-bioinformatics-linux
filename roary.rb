@@ -4,8 +4,8 @@ class Roary < Formula
   # doi "doi:10.1093/bioinformatics/btv421"
   # tag "bioinformatics"
 
-  url "https://github.com/sanger-pathogens/Roary/archive/v3.5.1.tar.gz"
-  sha256 "3224dba59ea11b6154e3dbff8529f5a9592c229ece480801d4b7925a8c13146e"
+  url "https://github.com/sanger-pathogens/Roary/archive/v3.6.6.tar.gz"
+  sha256 "63859c34de32f85de4242e4c0eda05e986dea9c02d29fcb9be53251d4f8b76ce"
 
   depends_on "Bio::Perl" => :perl
   depends_on "Bio::Roary" => :perl
@@ -16,6 +16,7 @@ class Roary < Formula
   depends_on "mcl"
   depends_on "parallel"
   depends_on "prank"
+  depends_on "mafft"
   depends_on "fasttree" => "with-double"
 
   depends_on "r" => :optional
@@ -27,6 +28,6 @@ class Roary < Formula
   end
 
   test do
-    assert_match "core", shell_output("roary -h 2>&1", 255)
+    assert_match "core", shell_output("roary -h 2>&1", 0)
   end
 end
