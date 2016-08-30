@@ -19,7 +19,8 @@ class Snippy < Formula
   depends_on "samtools"
   depends_on "vcflib"
   depends_on "vcftools"
-  depends_on "snpeff"
+  # latest version is buggy - stack overflow - so use bundled one
+  # depends_on "snpeff"
 
   def install
     rm "bin/snippy-make_tarball"
