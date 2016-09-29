@@ -4,13 +4,9 @@ class Pplacer < Formula
   # doi "10.1186/1471-2105-11-538"
   # tag "bioinformatics"
 
-  if OS.mac?
-    url "http://matsen.fhcrc.org/pplacer/builds/pplacer-v1.1-Darwin.tar.gz"
-    sha256 "89fdc4f2169361d59ff62b799f523909873473510fc0704c03703c62717c1695"
-  else
-    url "http://matsen.fhcrc.org/pplacer/builds/pplacer-v1.1-Linux.tar.gz"
-    sha256 "56609c052469bf7d7d238fd8ed70d06a51877a8a53e8d45272a2e9ba0a6911ed"
-  end
+  url "https://github.com/matsen/pplacer/releases/download/v1.1.alpha18/pplacer-linux-v1.1.alpha18-2-gcb55169.zip"
+  version "1.1.18a-2"
+  sha256 "4480a74a210b0b79c7da55c2a6851bb66eac411474b8d3f5109f7c5ea1cf41b8"
 
   def install
     bin.install "pplacer", "guppy", "rppr"
