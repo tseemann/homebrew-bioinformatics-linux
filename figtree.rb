@@ -1,5 +1,5 @@
 class Figtree < Formula
-  desc "graphical viewer of phylogenetic trees"
+  desc "Graphical viewer of phylogenetic trees"
   homepage "http://tree.bio.ed.ac.uk/software/figtree/"
   # doi ""
   # tag "bioinformatics"
