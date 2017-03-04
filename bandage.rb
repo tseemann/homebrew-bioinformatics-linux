@@ -12,8 +12,8 @@ class Bandage < Formula
   # doi "10.1101/018333"
   # tag "bioinformatics"
 
-  url "https://github.com/rrwick/Bandage/releases/download/v0.8.0/Bandage_Ubuntu_dynamic_v0_8_0.zip"
-  sha256 "cea4466973949910c4d1deb7cd92b5ec0511247c63a2ebdbd927b41cac10bade"
+  url "https://github.com/rrwick/Bandage/releases/download/v0.8.1/Bandage_Ubuntu_dynamic_v0_8_1.zip"
+  sha256 "2e8332e59b95438040a1b0ad29b3730ac63d7c638c635aeddde4789bf7a3116c"
 
   depends_on LinuxRequirement
 
@@ -24,6 +24,6 @@ class Bandage < Formula
   end
 
   test do
-    # Bandage is a GUI with no command line capability
+    # Bandage is a GUI with no command line testing capability
   end
 end
