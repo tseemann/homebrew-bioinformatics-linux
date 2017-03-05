@@ -1,8 +1,7 @@
 class Pftools < Formula
   desc "Detect PROSITE motifs in protein sequences"
   homepage "http://brylinski.cct.lsu.edu/content/pftools"
-  # doi ""
-  # pmid "12230035"
+  # doi "10.1093/bib/3.3.265"
   # tag "bioinformatics"
 
   url "ftp://lausanne.isb-sib.ch/pub/software/unix/pftools/pft2.3/pft2.3.5.d.tar.gz"
