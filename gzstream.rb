@@ -10,6 +10,8 @@ class Gzstream < Formula
     system "make"
     system "make", "test"
     lib.install "libgzstream.a"
+    # not readable by others
+    chmod 0644, "gzstream.h" 
     include.install "gzstream.h"
     doc.install "README", "index.html", "logo.gif", "COPYING.LIB"
     pkgshare.install Dir["test_*.C"], "Makefile"
