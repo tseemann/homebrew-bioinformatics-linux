@@ -4,9 +4,8 @@ class Figtree < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "http://tree.bio.ed.ac.uk/download.php?id=90&num=3"
-  sha256 "5064509fbe8cf069c6b0f8fdacf8c3f651971b11956484ce98a18a114ce1a096"
-  version "1.4.2"
+  url "https://github.com/rambaut/figtree/releases/download/v1.4.3/FigTree_v1.4.3.tgz"
+  sha256 "f497d4dd3a6d220f6b62495b6f47a12ade50d87dbd8d6089f168e94d202f937b"
 
   depends_on :java
 
