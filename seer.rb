@@ -14,9 +14,9 @@ class Seer < Formula
 
   depends_on LinuxRequirement
 
-  url "https://github.com/johnlees/seer/releases/download/v1.1.2/seer_v1.1.2_static_all.tar.gz"
-  version "1.1.2"
-  sha256 "19a3b21d66bf0a712b33678680dd56126493962406ba085a776c7101a581ff54"
+  url "https://github.com/johnlees/seer/releases/download/v1.1.3/seer_v1.1.3_static.tar.gz"
+  version "1.1.3"
+  sha256 "a69e5384e4c9ceea0fae321cc348e5dfa41271bbc8e440a35c6f8d4ee6a7c2ef"
 
   def install
     bin.install Dir["*"]
