@@ -12,6 +12,7 @@ class Rematch < Formula
   depends_on "samtools"
   depends_on "bcftools"
   depends_on "wget"
+  depends_on "blast"
 
   def install
     rm_r "src"
