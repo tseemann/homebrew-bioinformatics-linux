@@ -28,7 +28,7 @@ class BlastLegacy < Formula
   end
 
   test do
-    assert_match "BLOSUM62", shell_output("blastall 2>&1", 1)
-    assert_match "millions", shell_output("formatdb - 2>&1", 1)
+    assert_match "BLOSUM62", shell_output("#{bin}/blastall 2>&1", 1)
+    assert_match "millions", shell_output("#{bin}/formatdb - 2>&1", 1)
   end
 end

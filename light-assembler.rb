@@ -15,6 +15,6 @@ class LightAssembler < Formula
   end
 
   test do
-    assert_match "LightAssembler", shell_output("LightAssembler 2>&1", 1)
+    assert_match "LightAssembler", shell_output("#{bin}/LightAssembler 2>&1", 1)
   end
 end

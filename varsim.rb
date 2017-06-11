@@ -17,6 +17,6 @@ class Varsim < Formula
   end
 
   test do
-    assert_match "diploid", shell_output("varsim 2>&1", 1)
+    assert_match "diploid", shell_output("#{bin}/varsim 2>&1", 1)
   end
 end

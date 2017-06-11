@@ -30,6 +30,6 @@ class MagicBlast < Formula
   end
 
   test do
-    assert_match "BLAST", shell_output("magicblast 2>&1", 1)
+    assert_match "BLAST", shell_output("#{bin}/magicblast 2>&1", 1)
   end
 end

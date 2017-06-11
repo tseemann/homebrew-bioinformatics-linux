@@ -15,6 +15,6 @@ class Xstk < Formula
   end
 
   test do
-    assert_match "primer", shell_output("xsel 2>&1", 1)
+    assert_match "primer", shell_output("#{bin}/xsel 2>&1", 1)
   end
 end

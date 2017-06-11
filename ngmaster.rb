@@ -18,6 +18,6 @@ class Ngmaster < Formula
   end
 
   test do
-    assert_match "10699\t6277\t4", shell_output("ngmaster.py #{prefix}/example.fna")
+    assert_match "10699\t6277\t4", shell_output("#{bin}/ngmaster.py #{prefix}/example.fna")
   end
 end

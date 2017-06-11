@@ -22,6 +22,6 @@ class Ispcr < Formula
   end
 
   test do
-    assert_match "In-Situ PCR", shell_output("isPcr 2>&1", 255)
+    assert_match "In-Situ PCR", shell_output("#{bin}/isPcr 2>&1", 255)
   end
 end

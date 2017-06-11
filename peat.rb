@@ -23,8 +23,8 @@ class Peat < Formula
   end
 
   test do
-    assert_match "trimming", shell_output("PEAT 2>&1", 1)
-    assert_match "single", shell_output("PEAT single 2>&1", 1)
-    assert_match "paired", shell_output("PEAT paired 2>&1", 1)
+    assert_match "trimming", shell_output("#{bin}/PEAT 2>&1", 1)
+    assert_match "single", shell_output("#{bin}/PEAT single 2>&1", 1)
+    assert_match "paired", shell_output("#{bin}/PEAT paired 2>&1", 1)
   end
 end

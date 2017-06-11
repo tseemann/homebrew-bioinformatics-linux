@@ -20,6 +20,6 @@ class Gff3toembl < Formula
   end
 
   test do
-    assert_match "Converts prokaryote GFF3 annotations to EMBL for ENA submission", shell_output("gff3_to_embl -h 2>&1", 0)
+    assert_match "Converts prokaryote GFF3", shell_output("#{bin}/gff3_to_embl -h 2>&1", 0)
   end
 end

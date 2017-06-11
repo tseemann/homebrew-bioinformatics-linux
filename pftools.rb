@@ -21,7 +21,7 @@ class Pftools < Formula
   end
 
   test do
-    assert_match "profile", shell_output("pfscan 2>&1", 1)
-    assert_match "asymmetric", shell_output("gtop 2>&1", 1)
+    assert_match "profile", shell_output("#{bin}/pfscan 2>&1", 1)
+    assert_match "asymmetric", shell_output("#{bin}/gtop 2>&1", 1)
   end
 end

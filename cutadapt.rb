@@ -19,6 +19,6 @@ class Cutadapt < Formula
   end
 
   test do
-    system "cutadapt", "--version"
+    assert_match "interleaved", shell_output("#{bin}/cutadapt -h 2>&1")
   end
 end

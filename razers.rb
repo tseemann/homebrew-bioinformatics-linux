@@ -23,7 +23,7 @@ class Razers < Formula
   end
 
   test do
-    assert_match "versatile", shell_output("razers3 -help 2>&1", 0)
-    assert_match "read2", shell_output("razers3 -o - #{share}/razers/example/genome.fa #{share}/razers/example/reads.fa")
+    assert_match "versatile", shell_output("#{bin}/razers3 -help 2>&1", 0)
+    assert_match "read2", shell_output("#{bin}/razers3 -o - #{share}/razers/example/genome.fa #{share}/razers/example/reads.fa")
   end
 end

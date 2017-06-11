@@ -24,7 +24,7 @@ class Abricate < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("abricate --version")
-    assert_match "resfinder", shell_output("abricate --list 2>&1")
+    assert_match version.to_s, shell_output("#{bin}/abricate --version")
+    assert_match "resfinder", shell_output("#{bin}/abricate --list 2>&1")
   end
 end

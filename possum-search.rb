@@ -20,8 +20,8 @@ class PossumSearch < Formula
   end
 
   test do
-    assert_match "PSSM", shell_output("possumsearch -help 2>&1", 0)
-    assert_match "uniform", shell_output("possumdist -help 2>&1", 0)
-    assert_match "enhanced", shell_output("possumfreqs -help 2>&1", 0)
+    assert_match "PSSM", shell_output("#{bin}/possumsearch -help 2>&1", 0)
+    assert_match "uniform", shell_output("#{bin}/possumdist -help 2>&1", 0)
+    assert_match "enhanced", shell_output("#{bin}/possumfreqs -help 2>&1", 0)
   end
 end

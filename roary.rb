@@ -28,6 +28,6 @@ class Roary < Formula
   end
 
   test do
-    assert_match "core", shell_output("roary -h 2>&1", 0)
+    assert_match "core", shell_output("#{bin}/roary -h 2>&1", 0)
   end
 end

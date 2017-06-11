@@ -18,6 +18,6 @@ class Ascp < Formula
   end
 
   test do
-    assert_match "PROXY", shell_output("ascp -h 2>&1", 0)
+    assert_match "PROXY", shell_output("#{bin}/ascp -h 2>&1", 0)
   end
 end
