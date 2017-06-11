@@ -36,6 +36,6 @@ class Nullarbor < Formula
   end
 
   test do
-    system "#{bin}/nullarbor.pl", "--version"
+    assert_match "dependencies", shell_output("#{bin}/nullarbor.pl --help 2>&1")
   end
 end
