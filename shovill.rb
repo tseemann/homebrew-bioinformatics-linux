@@ -4,8 +4,8 @@ class Shovill < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/tseemann/shovill/archive/v0.4.tar.gz"
-  sha256 "6fcedfdf2bc12cb6cf6d36426f941f55bf76fe612463b37faf9ce52c46fa3232"
+  url "https://github.com/tseemann/shovill/archive/v0.5.tar.gz"
+  sha256 "aa01128e98d014725f465a9a2a7c692bb042d0c609dc58a2e05b40f98c1165da"
 
   head "https://github.com/tseemann/shovill.git"
 
