@@ -1,25 +1,28 @@
-class LinuxRequirement < Requirement
-  fatal true
-  satisfy OS.linux?
-  def message
-    "This formula only supports the Linux binary version."
-  end
-end
-
 class Seer < Formula
   desc "Sequence element (kmer) enrichment analysis"
   homepage "https://github.com/johnlees/seer"
   # doi "10.1101/038463"
   # tag "bioinformatics"
 
-  depends_on LinuxRequirement
+  url "https://github.com/johnlees/seer/releases/download/v1.1.4/seer_v1.1.4.tar.gz"
+  sha256 "768b413590bd662352d9f2e448f0392366f2a7b6dd5ebd087855ac8bc004efab"
 
-  url "https://github.com/johnlees/seer/releases/download/v1.1.3/seer_v1.1.3_static.tar.gz"
-  version "1.1.3"
-  sha256 "a69e5384e4c9ceea0fae321cc348e5dfa41271bbc8e440a35c6f8d4ee6a7c2ef"
+  head "https://github.com/johnlees/seer.git"
+
+  needs :cxx11
+
+  depends_on "hdf5"
+  depends_on "boost"
+  depends_on "armadillo"
+  depends_on "dlib"
+  depends_on "openblas"
+  depends_on "gzstream"
 
   def install
-    bin.install Dir["*"]
+    system "make", "-C", "src", "PREFIX=#{prefix}", "BINDIR=#{bin}"
+    bin.install "src/seer", "src/kmds", "src/map_back", "src/combineKmers", "src/filter_seer"
+    pkgshare.install "scripts", "test"
+    doc.install "LICENSE", "README.md"
   end
 
   test do
