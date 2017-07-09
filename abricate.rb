@@ -4,8 +4,8 @@ class Abricate < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/tseemann/abricate/archive/v0.4.tar.gz"
-  sha256 "e511bdeb0b611bbedd4dbd3caef2051f5d4ff8224aeaeba02c7b91863625071c"
+  url "https://github.com/tseemann/abricate/archive/v0.5.tar.gz"
+  sha256 "2a98736c3a4a060acb4fa4678cb605ca36bd73148fcc5749ad15c74a4a0073ef"
 
   head "https://github.com/tseemann/abricate.git"
 
@@ -18,6 +18,8 @@ class Abricate < Formula
   depends_on "JSON" => :perl
 
   depends_on "blast"
+  depends_on "emboss"
+  depends_on "unzip"
 
   def install
     prefix.install Dir["*"]
