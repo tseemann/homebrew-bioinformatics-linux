@@ -4,8 +4,8 @@ class TrimGalore < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/trim_galore_v0.4.1.zip"
-  sha256 "7e7609c68c54032e985eedf36d3b810f39e5bd3d1003a3686f2a34f532ae5d3d"
+  url "https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/trim_galore_v0.4.4.zip"
+  sha256 "ccd7eecc73327da29230f3e7c7311a4e21b2cfe7282be18fa059ba900fc33116"
 
   depends_on "IPC::Open3" => :perl
   depends_on "cutadapt"
