@@ -1,11 +1,13 @@
 class Varsim < Formula
-  desc "high-fidelity simulation validation framework for NGS"
+  desc "High-fidelity simulation validation framework for NGS"
   homepage "https://github.com/bioinform/varsim"
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/bioinform/varsim/releases/download/v0.5.3/varsim-0.5.3.tar.gz"
-  sha256 "f5481cd890fd1ecf525c5a102170f12639af99f14de88dc112adebfbe2dd9f5a"
+  url "https://github.com/bioinform/varsim/releases/download/v0.8.1/varsim-0.8.1.tar.gz"
+  sha256 "0f5356af93d44d49b1bdd61e0c5fcafe63e45640875703ad42e1e96237619c10"
+  
+  head "https://github.com/bioinform/varsim.git"
 
   depends_on :java
 
