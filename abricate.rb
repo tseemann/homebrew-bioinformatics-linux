@@ -4,8 +4,8 @@ class Abricate < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/tseemann/abricate/archive/v0.5.tar.gz"
-  sha256 "2a98736c3a4a060acb4fa4678cb605ca36bd73148fcc5749ad15c74a4a0073ef"
+  url "https://github.com/tseemann/abricate/archive/v0.6.tar.gz"
+  sha256 "fa5d2c72b2b50ca0909168390ef39755a6086948c2b04dd90e55320687e586c4"
 
   head "https://github.com/tseemann/abricate.git"
 
@@ -17,6 +17,8 @@ class Abricate < Formula
   depends_on "LWP::Simple" => :perl
   depends_on "JSON" => :perl
 
+  depends_on "blast" => :build
+
   depends_on "blast"
   depends_on "emboss"
   depends_on "unzip"
@@ -25,8 +27,13 @@ class Abricate < Formula
     prefix.install Dir["*"]
   end
 
+  def post_install
+    system "#{bin}/abricate", "--setupdb"
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/abricate --version")
     assert_match "resfinder", shell_output("#{bin}/abricate --list 2>&1")
+    assert_match "OK", shell_output("#{bin}/abricate --check 2>&1")
   end
 end
