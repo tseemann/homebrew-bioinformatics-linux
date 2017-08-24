@@ -4,8 +4,8 @@ class Nullarbor < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/tseemann/nullarbor/archive/v1.01.tar.gz"
-  sha256 "b3d74855040b3b7a07b44fe477d11e87e61b389ff9bf99c9ad8d57c53ca5a453"
+  url "https://github.com/tseemann/nullarbor/archive/v1.28.tar.gz"
+  sha256 "7525e6d3b6f4a9658bd80c024f7c949a8ddbc21d16fc65d7dc5f35df8e74c902"
 
   head "https://github.com/tseemann/nullarbor.git"
 
@@ -15,7 +15,10 @@ class Nullarbor < Formula
   depends_on "Data::Dumper" => :perl
   depends_on "File::Copy" => :perl
   depends_on "YAML::Tiny" => :perl
+  depends_on "SVG" => :perl
+  depends_on "JSON" => :perl
 
+  depends_on "emboss"
   depends_on "prokka"
   depends_on "fasttree" => "with-double"
   depends_on "megahit"
@@ -25,11 +28,10 @@ class Nullarbor < Formula
   depends_on "mlst"
   depends_on "abricate"
   depends_on "newick-utils"
-  depends_on "mash"
   depends_on "imagemagick" => "with-librsvg"
+  depends_on "tseemann/bioinformatics-linux/snp-dists"
   depends_on "tseemann/bioinformatics-linux/snippy"
   depends_on "tseemann/bioinformatics-linux/roary"
-  depends_on "parsnp" => :optional
 
   def install
     prefix.install Dir["*"]
@@ -37,5 +39,6 @@ class Nullarbor < Formula
 
   test do
     assert_match "dependencies", shell_output("#{bin}/nullarbor.pl --help 2>&1")
+    assert_match version.to_s, shell_output("#{bin}/nullarbor.pl --version 2>&1")
   end
 end
