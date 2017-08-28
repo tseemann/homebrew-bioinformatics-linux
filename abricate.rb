@@ -4,8 +4,8 @@ class Abricate < Formula
   # doi ""
   # tag "bioinformatics"
 
-  url "https://github.com/tseemann/abricate/archive/v0.6.tar.gz"
-  sha256 "fa5d2c72b2b50ca0909168390ef39755a6086948c2b04dd90e55320687e586c4"
+  url "https://github.com/tseemann/abricate/archive/v0.7.tar.gz"
+  sha256 "572e077207fad5ec056b3d6496f900af06adb11bdcdf6529288ea21575c23cd8"
 
   head "https://github.com/tseemann/abricate.git"
 
