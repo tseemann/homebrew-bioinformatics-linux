@@ -17,7 +17,7 @@ class Roary < Formula
   depends_on "parallel"
   depends_on "prank"
   depends_on "mafft"
-  depends_on "fasttree" => "with-double"
+  depends_on "fasttree"
 
   depends_on "r" => :optional
   depends_on "kraken" => :optional

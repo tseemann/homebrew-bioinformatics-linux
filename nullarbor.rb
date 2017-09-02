@@ -20,7 +20,7 @@ class Nullarbor < Formula
 
   depends_on "emboss"
   depends_on "prokka"
-  depends_on "fasttree" => "with-double"
+  depends_on "fasttree"
   depends_on "megahit"
   depends_on "spades"
   depends_on "kraken"
