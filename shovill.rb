@@ -1,13 +1,13 @@
 class Shovill < Formula
   desc "Faster Spades-based de novo genome assembly"
   homepage "https://github.com/tseemann/shovill"
-  # doi ""
-  # tag "bioinformatics"
-
-  url "https://github.com/tseemann/shovill/archive/v0.7.0.tar.gz"
-  sha256 "38e43e088f5ec898678d9056f658b97612cd888cf80eae47fcdddf308aaaac89"
+  url "https://github.com/tseemann/shovill/archive/v0.7.1.tar.gz"
+  sha256 "1c50b3558392ab9a13b7c32fc323cd33293bc990843d0ab11e712cad17b3568c"
 
   head "https://github.com/tseemann/shovill.git"
+
+  # doi ""
+  # tag "bioinformatics"
 
   depends_on "Time::Piece" => :perl
   depends_on "File::Slurp" => :perl
