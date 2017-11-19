@@ -1,20 +1,19 @@
 class MagicBlast < Formula
-  desc "Magic BLAST binaries"
-  homepage "http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastNews#1"
+  desc "Magic BLAST read mapper"
+  homepage "https://ncbi.github.io/magicblast/"
   # tag "bioinformatics"
 
-  version "1.1.0"
+  version "1.3.0"
   if OS.mac?
     url "ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/#{version}/ncbi-magicblast-#{version}-x64-macosx.tar.gz"
+    # FIXME - this is wrong:
     sha256 "f962174327841a5f0528a84270b3efb96d7fcdaecba09f3349056836f31ee636"
   elsif OS.linux?
     url "ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/#{version}/ncbi-magicblast-#{version}-x64-linux.tar.gz"
-    sha256 "1e28dc19eaf03b22a94ea439c68945b48afde610c7efbe354c18139c8ad07527"
+    sha256 "9247ebcd14e4f0ca1e710d3b5fd228ff2c9d61a11acac8862136758763e3f3d6"
   else
     onoe "Unsupported operating system"
   end
-
-  version "1.1.0"
 
   def install
     File.rename("bin/makeblastdb", "bin/magicblast-makeblastdb")
