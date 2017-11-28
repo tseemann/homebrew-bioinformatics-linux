@@ -4,8 +4,8 @@ class Snippy < Formula
   # doi ""
   # tag "bioinformatics"
   
-  url "https://github.com/tseemann/snippy/archive/v3.1.tar.gz"
-  sha256 "4d9354bd953ee46937870cfd1b7f608e4932b1990b7e73320c888902f7753ff6"
+  url "https://github.com/tseemann/snippy/archive/v3.2.tar.gz"
+  sha256 "75377acc4687e21d46d773936389e3f0abd8441076d3c9acdd31be13b53352a8"
 
   head "https://github.com/tseemann/snippy.git"
 
@@ -23,13 +23,14 @@ class Snippy < Formula
   # depends_on "snpeff"
 
   def install
-    rm "bin/snippy-make_tarball"
+    # rm "bin/snippy-make_tarball"
     prefix.install Dir["*"]
   end
 
   test do
+    # terrible hack - need to fix return codes of other --help's
     ["","-core","-vcf_report","-vcf_to_tab","-vcf_filter"].each do |suffix|
-      assert_match "Usage:", shell_output("#{bin}/snippy#{suffix} 2>&1", 1)
+      assert_match "Usage:", shell_output("#{bin}/snippy#{suffix} --fake 2>&1", 1)
     end
   end
 end
