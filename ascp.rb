@@ -19,8 +19,8 @@ class Ascp < Formula
     installer = stable.url.sub %r{^.*/}, ""
     # installer = "ascp-#{version}.sh"
     # Patch in preferred install location (can't specify on cmdline)
-    idir = OS.mac? ? "$HOME/Applications" : "~/.aspera"
-    inreplace installer, %Q[INSTALL_DIR="#{idir}"], %Q[INSTALL_DIR="#{prefix}"]
+    idir = OS.mac? ? %Q["$HOME/Applications"] : "~/.aspera"
+    inreplace installer, "INSTALL_DIR=#{idir}", "INSTALL_DIR=#{prefix}"
     system "sh", installer
     # Move everything up a folder
     cdir = OS.mac? ? "Aspera CLI" : "cli"
