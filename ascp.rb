@@ -1,36 +1,53 @@
 class Ascp < Formula
   desc "Aspera command-line download client"
-  homepage "https://asperasoft.com/"
-
+  homepage "http://asperasoft.com/"
   if OS.mac?
-    url "https://download.asperasoft.com/download/sw/cli/3.7.2/aspera-cli-3.7.2.354.010c3b8-mac-10.7-64-release.sh"
-    sha256 "336bd3db40f9f4c273c4208dbf91df9eb5c607f474881ed19b44d3a26cff226e"
+    url "https://download.asperasoft.com/download/sw/cli/3.7.7/aspera-cli-3.7.7.608.927cce8-mac-10.7-64-release.sh"
+    sha256 "c6f7af506a4de8858b8b40e63883e671926af7b43160d4fb6765790c56b299ba"
   else
-    url "https://download.asperasoft.com/download/sw/cli/3.7.2/aspera-cli-3.7.2.354.010c3b8-linux-64-release.sh"
-    sha256 "a8dda6d2159af442eaf1393d4bbc9991628d6fdd1582b4cce04441f770a9a517"
+    url "https://download.asperasoft.com/download/sw/cli/3.7.7/aspera-cli-3.7.7.608.927cce8-linux-64-release.sh"
+    sha256 "83efd03b699bdb1cac6c62befb3812342d6122217f4944f732ae7a135d578966"
   end
+  version "3.7.7"
 
-  version "3.7.2.354.010c3b8"
+  unless OS.mac?
+    depends_on "patchelf" => :build
+  end
 
   def install
     # Deduce download name from URL
     installer = stable.url.sub %r{^.*/}, ""
-    # Patch in preferred install location
+    # installer = "ascp-#{version}.sh"
+    # Patch in preferred install location (can't specify on cmdline)
     idir = OS.mac? ? "$HOME/Applications" : "~/.aspera"
-    ohai "idir=#{idir}"
-    inreplace installer, "INSTALL_DIR=#{idir}", "INSTALL_DIR=#{prefix}"
+    inreplace installer, %Q[INSTALL_DIR="#{idir}"], %Q[INSTALL_DIR="#{prefix}"]
     system "sh", installer
     # Move everything up a folder
     cdir = OS.mac? ? "Aspera CLI" : "cli"
-    ohai "cdir=#{cdir}"
     mv Dir["#{prefix}/#{cdir}/*"], prefix
     rmdir prefix/"cli"
-    # Fix audit: Non-executables were installed to "/home/linuxbrew/.linuxbrew/opt/ascp/bin"
+    # Fix: Non-executables were installed to "/home/linuxbrew/.linuxbrew/opt/ascp/bin"
     rm "#{bin}/.aspera_cli_conf"
+    # Patch binaries and remove libs on Linux
+    unless OS.mac?
+      rm_r prefix/"lib"
+      Dir["#{bin}/*"].each do |exe|
+        system "patchelf",
+               "--set-interpreter", HOMEBREW_PREFIX/"lib/ld.so",
+               "--set-rpath", HOMEBREW_PREFIX/"lib",
+               exe
+      end
+    end
+  end
+
+  def caveats
+    <<~EOS
+    Aspera keys are in #{prefix}/etc
+    Aspera certificates are in #{prefix}/certs
+    EOS
   end
 
   test do
     assert_match "PROXY", shell_output("#{bin}/ascp -h 2>&1", 0)
   end
 end
-
