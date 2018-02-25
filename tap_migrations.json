@@ -7,5 +7,6 @@
   "jspecies": "brewsci/bio",
   "kr": "brewsci/bio",
   "light-assembler": "brewsci/bio",
-  "lofreq": "brewsci/bio"
+  "lofreq": "brewsci/bio",
+  "snp-dists": "brewsci/bio"
 }
