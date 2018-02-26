@@ -8,5 +8,7 @@
   "kr": "brewsci/bio",
   "light-assembler": "brewsci/bio",
   "lofreq": "brewsci/bio",
+  "panito": "brewsci/bio",
+  "pftools": "brewsci/bio",
   "snp-dists": "brewsci/bio"
 }
