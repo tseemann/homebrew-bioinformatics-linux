@@ -16,5 +16,6 @@
   "pftools": "brewsci/bio",
   "seqkit": "brewsci/bio",
   "shovill": "brewsci/bio",
+  "sibleia": "brewsci/bio",
   "snp-dists": "brewsci/bio"
 }
