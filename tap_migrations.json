@@ -18,6 +18,6 @@
   "seqkit": "brewsci/bio",
   "shovill": "brewsci/bio",
   "sibleia": "brewsci/bio",
-  "snp-dists": "brewsci/bio"
+  "snp-dists": "brewsci/bio",
   "varsim": "brewsci/bio"
 }
