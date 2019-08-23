@@ -1,3 +1,8 @@
+# NOTICE
+
+:warning: This repository has mostly been migrated to Homebrew Bio!
+See https://github.com/brewsci/homebrew-bio for instructions.
+
 # homebrew-bioinformatics-linux
 
 _The too hard basket for Linux bioinformatics brew formulae_!
