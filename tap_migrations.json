@@ -14,6 +14,7 @@
   "light-assembler": "brewsci/bio",
   "lofreq": "brewsci/bio",
   "magic-blast": "brewsci/bio",
+  "ngmaster": "brewsci/bio",
   "panito": "brewsci/bio",
   "pftools": "brewsci/bio",
   "seqkit": "brewsci/bio",
