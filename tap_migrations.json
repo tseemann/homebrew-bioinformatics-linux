@@ -3,6 +3,7 @@
   "ascp": "brewsci/bio",
   "bandage": "brewsci/bio",
   "blast-legacy": "brewsci/bio",
+  "disty": "brewsci/bio",
   "easel": "brewsci/bio",
   "figtree": "brewsci/bio",
   "gepard": "brewsci/bio",
@@ -18,6 +19,7 @@
   "seqkit": "brewsci/bio",
   "shovill": "brewsci/bio",
   "sibleia": "brewsci/bio",
+  "snippy": "brewsci/bio",
   "snp-dists": "brewsci/bio",
   "varsim": "brewsci/bio"
 }
